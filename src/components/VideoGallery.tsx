@@ -14,6 +14,12 @@ const videos = [
     category: "commercial"
   },
   {
+    vimeoId: "1092688022",
+    title: "Ice Hockey World Championships 2025",
+    description: "Ice Hockey World Championships 2025",
+    category: "commercial"
+  },
+  {
     vimeoId: "115783408",
     title: "Documentary Series",
     description: "Capturing authentic moments and emotions",
