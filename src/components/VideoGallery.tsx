@@ -20,6 +20,12 @@ const videos = [
     category: "longform"
   },
   {
+    vimeoId: "1092688022",
+    title: "When We Were Kings - Avslutet",
+    description: "Documentary, 4 episodes",
+    category: "longform"
+  },
+  {
     vimeoId: "148751763",
     title: "Fashion Film",
     description: "Cinematic exploration of style and elegance",
