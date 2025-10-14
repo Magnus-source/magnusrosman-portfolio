@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Play, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Play, X, RotateCcw } from "lucide-react";
+import Player from "@vimeo/player";
 
 interface VideoCardProps {
   vimeoId: string;
@@ -11,10 +13,44 @@ interface VideoCardProps {
 
 const VideoCard = ({ vimeoId, title, description }: VideoCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasEnded, setHasEnded] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const playerRef = useRef<Player | null>(null);
   const thumbnailUrl = `https://vumbnail.com/${vimeoId}_large.jpg`;
+
+  useEffect(() => {
+    if (isOpen && iframeRef.current && !playerRef.current) {
+      playerRef.current = new Player(iframeRef.current);
+      
+      playerRef.current.on('ended', () => {
+        setHasEnded(true);
+      });
+    }
+
+    return () => {
+      if (playerRef.current) {
+        playerRef.current.destroy();
+        playerRef.current = null;
+      }
+    };
+  }, [isOpen]);
 
   const handlePlay = () => {
     setIsOpen(true);
+    setHasEnded(false);
+  };
+
+  const handleReplay = async () => {
+    setHasEnded(false);
+    if (playerRef.current) {
+      await playerRef.current.setCurrentTime(0);
+      await playerRef.current.play();
+    }
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setHasEnded(false);
   };
 
   return (
@@ -44,16 +80,39 @@ const VideoCard = ({ vimeoId, title, description }: VideoCardProps) => {
         </div>
       </Card>
 
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="max-w-[95vw] w-full h-[90vh] p-0 bg-black border-none">
           <div className="relative w-full h-full">
             <iframe
+              ref={iframeRef}
               src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0`}
               className="w-full h-full"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             />
+            {hasEnded && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-white mb-8">{title}</h3>
+                <div className="flex gap-4">
+                  <Button
+                    onClick={handleReplay}
+                    size="lg"
+                    className="gap-2"
+                  >
+                    <RotateCcw className="w-5 h-5" />
+                    Spela igen
+                  </Button>
+                  <Button
+                    onClick={handleClose}
+                    variant="outline"
+                    size="lg"
+                  >
+                    Stäng
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         </DialogContent>
       </Dialog>
