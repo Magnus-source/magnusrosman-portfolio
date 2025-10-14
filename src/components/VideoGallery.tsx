@@ -44,13 +44,17 @@ interface VideoGalleryProps {
 }
 
 const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
-  const filteredVideos = videos.filter(video => video.category === activeCategory);
+  const sortedVideos = [...videos].sort((a, b) => {
+    if (a.category === activeCategory && b.category !== activeCategory) return -1;
+    if (a.category !== activeCategory && b.category === activeCategory) return 1;
+    return 0;
+  });
 
   return (
     <section className="py-12 px-6 min-h-screen">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredVideos.map((video, index) => (
+          {sortedVideos.map((video, index) => (
             <VideoCard key={index} {...video} />
           ))}
         </div>
