@@ -61,6 +61,12 @@ const videos = [
     description: "Pasqual testimonial",
     category: "commercial"
   },
+  {
+    vimeoId: "707235736",
+    title: "ICA",
+    description: "Pasqual gör entré",
+    category: "commercial"
+  },
 ];
 
 interface VideoGalleryProps {
