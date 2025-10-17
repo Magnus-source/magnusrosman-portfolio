@@ -71,7 +71,7 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
             <div className="mb-4 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/30">
               <Play className="w-8 h-8 text-white fill-white ml-1" />
             </div>
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
+            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white text-center px-4 drop-shadow-lg">
               {title}
             </h3>
             <p className="text-white/90 text-xs md:text-sm text-center px-4 mt-2 drop-shadow-lg max-w-md">
