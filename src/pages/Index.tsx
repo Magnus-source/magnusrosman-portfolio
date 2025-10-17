@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import VideoGallery from "@/components/VideoGallery";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -11,7 +12,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
-      <div className="pt-16">
+      <Hero />
+      <div id="work" className="pt-16">
         <VideoGallery activeCategory={activeCategory} />
         <About />
         <Contact />
