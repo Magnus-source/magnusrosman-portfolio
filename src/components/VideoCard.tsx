@@ -24,6 +24,10 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
       playerRef.current = new Player(iframeRef.current);
       
       playerRef.current.on('ended', () => {
+        // Hide iframe immediately to prevent Vimeo outro from showing
+        if (iframeRef.current) {
+          iframeRef.current.style.opacity = '0';
+        }
         setHasEnded(true);
       });
     }
@@ -43,6 +47,10 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
 
   const handleReplay = async () => {
     setHasEnded(false);
+    // Show iframe again
+    if (iframeRef.current) {
+      iframeRef.current.style.opacity = '1';
+    }
     if (playerRef.current) {
       await playerRef.current.setCurrentTime(0);
       await playerRef.current.play();
@@ -50,6 +58,10 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
   };
 
   const handleClose = () => {
+    // Reset iframe opacity
+    if (iframeRef.current) {
+      iframeRef.current.style.opacity = '1';
+    }
     setIsOpen(false);
     setHasEnded(false);
   };
