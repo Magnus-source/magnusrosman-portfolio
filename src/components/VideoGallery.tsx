@@ -5,139 +5,162 @@ const videos = [
     vimeoId: "1081950900",
     title: "Ice Hockey World Championships 2025",
     description: "Television commercial",
-    category: "commercial"
+    category: "commercial",
+    size: "large" // wide tile
   },
   {
     vimeoId: "1092688022",
     title: "When We Were Kings - Avslutet",
     description: "Documentary, 4 episodes",
-    category: "longform"
+    category: "longform",
+    size: "large" // wide tile
   },
   {
     vimeoId: "742323349",
     title: "Häxdansen",
     description: "TV-series, Omklädningsrummet",
-    category: "longform"
+    category: "longform",
+    size: "small" // regular tile
   },
   {
     vimeoId: "742323479",
     title: "Häxdansen",
     description: "TV-series, Bussen",
-    category: "longform"
+    category: "longform",
+    size: "small"
   },
   {
     vimeoId: "742323562",
     title: "Häxdansen",
     description: "TV-series, Källaren",
-    category: "longform"
+    category: "longform",
+    size: "large"
   },
   {
     vimeoId: "955476760",
     title: "Touch me",
     description: "Weeping Willows",
-    category: "musicvideo"
+    category: "musicvideo",
+    size: "small"
   },
   {
     vimeoId: "704546507",
     title: "Håkan Hellström",
     description: "Din tid kommer",
-    category: "musicvideo"
+    category: "musicvideo",
+    size: "large"
   },
   {
     vimeoId: "707235622",
     title: "ICA",
     description: "Pasqual testimonial",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "707235736",
     title: "ICA",
     description: "Pasqual gör entré",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "707235412",
     title: "ICA",
     description: "Pasqual vs Sebastian",
-    category: "commercial"
+    category: "commercial",
+    size: "large"
   },
   {
     vimeoId: "707234991",
     title: "ICA",
     description: "300:e filmen",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "707235111",
     title: "ICA",
     description: "EMD",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "707235271",
     title: "ICA",
     description: "Ulf träffar Ulf",
-    category: "commercial"
+    category: "commercial",
+    size: "large"
   },
   {
     vimeoId: "707235058",
     title: "ICA",
     description: "Jamie Oliver",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "707234831",
     title: "ICA",
     description: "Påsken när Stig var ung",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "707235178",
     title: "ICA",
     description: "Rosa bandet",
-    category: "commercial"
+    category: "commercial",
+    size: "large"
   },
   {
     vimeoId: "955446551",
     title: "ICA",
     description: "Trucken",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "704551039",
     title: "NetOnNet",
     description: "Så mycket bättre",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "704554813",
     title: "Spies",
     description: "Priest",
-    category: "commercial"
+    category: "commercial",
+    size: "large"
   },
   {
     vimeoId: "704542881",
     title: "AMF",
     description: "KLF - Full song edit",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "704557975",
     title: "AMF",
     description: "KLF",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "704553615",
     title: "DHL",
     description: "Meeting",
-    category: "commercial"
+    category: "commercial",
+    size: "large"
   },
   {
     vimeoId: "704553867",
     title: "DHL",
     description: "Water cooler",
-    category: "commercial"
+    category: "commercial",
+    size: "small"
   },
 ];
 
@@ -155,9 +178,13 @@ const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
   return (
     <section className="py-12 px-6 min-h-screen">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[400px]">
           {sortedVideos.map((video, index) => (
-            <VideoCard key={index} {...video} />
+            <VideoCard 
+              key={index} 
+              {...video}
+              className={video.size === "large" ? "md:col-span-2" : "md:col-span-1"}
+            />
           ))}
         </div>
       </div>
