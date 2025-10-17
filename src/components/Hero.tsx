@@ -25,6 +25,11 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
+          {/* Subtitle above name */}
+          <p className="text-lg md:text-xl lg:text-2xl font-light tracking-wide uppercase text-white/70 mb-4 animate-fade-in">
+            Selected works of
+          </p>
+          
           {/* Main title */}
           <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] font-bold tracking-tighter leading-none mb-8 animate-fade-in text-white">
             <span className="block">MAGNUS</span>
