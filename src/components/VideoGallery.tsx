@@ -34,7 +34,7 @@ const videos = [
   {
     vimeoId: "742323349",
     title: "Häxdansen",
-    description: "6 episode TV-series",
+    description: "Omklädningsrummet",
     category: "longform"
   },
   {
