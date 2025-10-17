@@ -56,7 +56,7 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
 
   return (
     <>
-      <Card className={`group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 h-full ${className}`}>
+      <Card className={`group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 h-full rounded-none ${className}`}>
         <div className="relative h-full overflow-hidden bg-black">
           <img
             src={thumbnailUrl}
