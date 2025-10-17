@@ -24,10 +24,6 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
       playerRef.current = new Player(iframeRef.current);
       
       playerRef.current.on('ended', () => {
-        // Hide iframe immediately to prevent Vimeo outro from showing
-        if (iframeRef.current) {
-          iframeRef.current.style.opacity = '0';
-        }
         setHasEnded(true);
       });
     }
@@ -47,10 +43,6 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
 
   const handleReplay = async () => {
     setHasEnded(false);
-    // Show iframe again
-    if (iframeRef.current) {
-      iframeRef.current.style.opacity = '1';
-    }
     if (playerRef.current) {
       await playerRef.current.setCurrentTime(0);
       await playerRef.current.play();
@@ -58,10 +50,6 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
   };
 
   const handleClose = () => {
-    // Reset iframe opacity
-    if (iframeRef.current) {
-      iframeRef.current.style.opacity = '1';
-    }
     setIsOpen(false);
     setHasEnded(false);
   };
@@ -99,13 +87,13 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
             <iframe
               ref={iframeRef}
               src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0&outro=0`}
-              className="w-full h-full"
+              className={`w-full h-full transition-opacity duration-200 ${hasEnded ? 'opacity-0' : 'opacity-100'}`}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             />
             {hasEnded && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/95 backdrop-blur-md z-50">
+              <div className="fixed inset-0 flex flex-col items-center justify-center bg-black z-[9999]">
                 <h3 className="text-2xl font-bold text-white mb-8">{title}</h3>
                 <div className="flex gap-4">
                   <Button
