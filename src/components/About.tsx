@@ -1,14 +1,11 @@
 const About = () => {
-  return (
-    <section id="about" className="py-24 px-6 bg-secondary/30">
+  return <section id="about" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
           About
         </h2>
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-          <p>
-            Magnus create catchy and entertaining commercials as well as longer formats with a warm human touch.During 2025 Magnus produced the much appreciated 4 part documentary about "When we were kings", the football podcast with Erik Niva and Håkan Andreason that decided to quit in the middle of their huge success. The documentary premiered on Viaplay in May, 2025.
-          </p>
+          <p>Magnus create catchy and entertaining commercials as well as longer formats with a warm human touch. During 2025 Magnus produced the much appreciated 4 part documentary a"When we were kings - Avslutet", about the end of the much loved football podcast with Erik Niva and Håkan Andreason. The documentary premiered on Viaplay in May, 2025.</p>
           <p>
             Strong visual storytelling became Magnus' trade mark in his early career and he won numerous international awards for music videos and commercials for car brands like Mercedes and Honda. Artists include the likes of Turbonegro, The Ark, Håkan Hellström, Jay Jay Johansson and many more where
           </p>
@@ -47,8 +44,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
