@@ -67,6 +67,12 @@ const videos = [
     description: "Pasqual gör entré",
     category: "commercial"
   },
+  {
+    vimeoId: "707235058",
+    title: "ICA",
+    description: "Jamie Oliver",
+    category: "commercial"
+  },
 ];
 
 interface VideoGalleryProps {
