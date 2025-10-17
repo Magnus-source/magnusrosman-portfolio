@@ -93,7 +93,7 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
               allowFullScreen
             />
             {hasEnded && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm">
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/95 backdrop-blur-md z-50">
                 <h3 className="text-2xl font-bold text-white mb-8">{title}</h3>
                 <div className="flex gap-4">
                   <Button
