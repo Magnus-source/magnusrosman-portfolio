@@ -31,8 +31,8 @@ const videos = [
   },
   {
     vimeoId: "1081950900",
-    title: "Ice Hockey World Championships 2025",
-    description: "Television commercial",
+    title: "Viaplay",
+    description: "Ice Hockey World Championship 2025",
     category: "commercial",
     size: "large"
   },
