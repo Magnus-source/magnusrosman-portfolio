@@ -103,6 +103,12 @@ const videos = [
     description: "KLF",
     category: "commercial"
   },
+  {
+    vimeoId: "704553615",
+    title: "DHL",
+    description: "Meeting",
+    category: "commercial"
+  },
 ];
 
 interface VideoGalleryProps {
