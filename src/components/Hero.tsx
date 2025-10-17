@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const Hero = () => {
   const scrollToWork = () => {
     const element = document.getElementById("work");
@@ -9,38 +7,47 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight text-balance">
-          Visual Storyteller
-        </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto text-balance">
-          Creating compelling narratives through cinematic commercial films
-        </p>
-        <Button
-          size="lg"
-          onClick={scrollToWork}
-          className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg"
-        >
-          View Work
-        </Button>
-      </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg
-          className="w-6 h-6 text-muted-foreground"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/5 to-background" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.02]" 
+        style={{
+          backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
+          backgroundSize: '100px 100px'
+        }}
+      />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Main title */}
+          <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] font-bold tracking-tighter leading-none mb-8 animate-fade-in">
+            <span className="block">MAGNUS</span>
+            <span className="block">RÖSMAN</span>
+          </h1>
+          
+          {/* Subtitle with line */}
+          <div className="flex items-center gap-6 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="h-px bg-primary w-20" />
+            <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide uppercase text-muted-foreground">
+              Film Director
+            </p>
+          </div>
+
+          {/* Scroll indicator */}
+          <button 
+            onClick={scrollToWork}
+            className="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300 animate-fade-in"
+            style={{ animationDelay: '0.4s' }}
+          >
+            <span className="text-sm uppercase tracking-wider">Scroll to explore</span>
+            <div className="w-8 h-12 border-2 border-current rounded-full flex items-start justify-center p-2 group-hover:border-foreground transition-colors">
+              <div className="w-1 h-2 bg-current rounded-full animate-bounce" />
+            </div>
+          </button>
+        </div>
       </div>
     </section>
   );
