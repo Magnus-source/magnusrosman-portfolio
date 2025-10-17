@@ -73,6 +73,12 @@ const videos = [
     description: "Jamie Oliver",
     category: "commercial"
   },
+  {
+    vimeoId: "707234901",
+    title: "ICA",
+    description: "Trucken",
+    category: "commercial"
+  },
 ];
 
 interface VideoGalleryProps {
