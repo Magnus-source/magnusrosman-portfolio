@@ -2,28 +2,10 @@ import VideoCard from "./VideoCard";
 
 const videos = [
   {
-    vimeoId: "76979871",
-    title: "Brand Story",
-    description: "A compelling narrative for a luxury brand",
-    category: "commercial"
-  },
-  {
-    vimeoId: "268896653",
-    title: "Product Launch",
-    description: "Dynamic showcase of innovative technology",
-    category: "commercial"
-  },
-  {
     vimeoId: "1081950900",
     title: "Ice Hockey World Championships 2025",
     description: "Television commercial",
     category: "commercial"
-  },
-  {
-    vimeoId: "115783408",
-    title: "Documentary Series",
-    description: "Capturing authentic moments and emotions",
-    category: "longform"
   },
   {
     vimeoId: "1092688022",
@@ -50,12 +32,6 @@ const videos = [
     category: "longform"
   },
   {
-    vimeoId: "148751763",
-    title: "Fashion Film",
-    description: "Cinematic exploration of style and elegance",
-    category: "musicvideo"
-  },
-  {
     vimeoId: "955476760",
     title: "Touch me",
     description: "Weeping Willows",
@@ -66,18 +42,6 @@ const videos = [
     title: "Håkan Hellström",
     description: "Din tid kommer",
     category: "musicvideo"
-  },
-  {
-    vimeoId: "179528528",
-    title: "Automotive Excellence",
-    description: "High-octane commercial for premium vehicles",
-    category: "commercial"
-  },
-  {
-    vimeoId: "336812660",
-    title: "Food & Beverage",
-    description: "Sensory journey through culinary artistry",
-    category: "commercial"
   },
   {
     vimeoId: "707235622",
