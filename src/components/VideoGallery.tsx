@@ -38,6 +38,12 @@ const videos = [
     category: "longform"
   },
   {
+    vimeoId: "742323479",
+    title: "Häxdansen",
+    description: "TV-series, Bussen",
+    category: "longform"
+  },
+  {
     vimeoId: "148751763",
     title: "Fashion Film",
     description: "Cinematic exploration of style and elegance",
