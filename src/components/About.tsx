@@ -25,24 +25,6 @@ const About = () => {
             When he is not writing or shooting Magnus produce high end olive oil from his own estate, Collinadolce, on the Italian east coast.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div>
-            <p className="text-4xl font-bold text-primary mb-2">10+</p>
-            <p className="text-sm text-muted-foreground uppercase tracking-wider">Years Experience</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary mb-2">200+</p>
-            <p className="text-sm text-muted-foreground uppercase tracking-wider">Films Directed</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary mb-2">50+</p>
-            <p className="text-sm text-muted-foreground uppercase tracking-wider">Global Brands</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary mb-2">15+</p>
-            <p className="text-sm text-muted-foreground uppercase tracking-wider">Awards Won</p>
-          </div>
-        </div>
       </div>
     </section>;
 };
