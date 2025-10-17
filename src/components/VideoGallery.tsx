@@ -51,6 +51,48 @@ const videos = [
     size: "large"
   },
   {
+    vimeoId: "704551039",
+    title: "NetOnNet",
+    description: "Så mycket bättre",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "704554813",
+    title: "Spies",
+    description: "Priest",
+    category: "commercial",
+    size: "large"
+  },
+  {
+    vimeoId: "704542881",
+    title: "AMF",
+    description: "KLF - Full song edit",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "704557975",
+    title: "AMF",
+    description: "KLF",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "704553615",
+    title: "DHL",
+    description: "Meeting",
+    category: "commercial",
+    size: "large"
+  },
+  {
+    vimeoId: "704553867",
+    title: "DHL",
+    description: "Water cooler",
+    category: "commercial",
+    size: "small"
+  },
+  {
     vimeoId: "707235622",
     title: "ICA",
     description: "Pasqual testimonial",
@@ -117,48 +159,6 @@ const videos = [
     vimeoId: "955446551",
     title: "ICA",
     description: "Trucken",
-    category: "commercial",
-    size: "small"
-  },
-  {
-    vimeoId: "704551039",
-    title: "NetOnNet",
-    description: "Så mycket bättre",
-    category: "commercial",
-    size: "small"
-  },
-  {
-    vimeoId: "704554813",
-    title: "Spies",
-    description: "Priest",
-    category: "commercial",
-    size: "large"
-  },
-  {
-    vimeoId: "704542881",
-    title: "AMF",
-    description: "KLF - Full song edit",
-    category: "commercial",
-    size: "small"
-  },
-  {
-    vimeoId: "704557975",
-    title: "AMF",
-    description: "KLF",
-    category: "commercial",
-    size: "small"
-  },
-  {
-    vimeoId: "704553615",
-    title: "DHL",
-    description: "Meeting",
-    category: "commercial",
-    size: "large"
-  },
-  {
-    vimeoId: "704553867",
-    title: "DHL",
-    description: "Water cooler",
     category: "commercial",
     size: "small"
   },
