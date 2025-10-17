@@ -104,6 +104,12 @@ const videos = [
     category: "commercial"
   },
   {
+    vimeoId: "707235178",
+    title: "ICA",
+    description: "Rosa bandet",
+    category: "commercial"
+  },
+  {
     vimeoId: "707234901",
     title: "ICA",
     description: "Trucken",
