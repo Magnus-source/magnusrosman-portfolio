@@ -7,16 +7,25 @@ const About = () => {
         </h2>
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>
-            With over a decade of experience crafting visual narratives, I specialize in creating
-            compelling commercial films that connect brands with their audiences on an emotional level.
+            Magnus is a writer/director with an ability to create catchy and entertaining commercials as well as longer formats with a warm human touch.
           </p>
           <p>
-            My approach combines cinematic storytelling with strategic brand messaging, resulting in
-            content that not only looks beautiful but drives real business results.
+            Strong visual storytelling became Magnus' trade mark in his early career and he won numerous international awards for music videos and commercials for car brands like Mercedes and Honda.
           </p>
           <p>
-            From concept development to final delivery, I work closely with brands and agencies to
-            bring their vision to life through the power of film.
+            He later developed an unrivaled ability to create funny characters and efficient dialogue for Swedish supermarket chain ICA. More than 100 films over an 8 year period earned him an array of international awards for the ICA project and it moved him into writing and directing drama for Swedish Television.
+          </p>
+          <p>
+            With the dark comedy, Häxdansen, Magnus worked with the absolute elite of Swedish actor's and the 6 episode drama was nominated for Kristallen for Best Drama of the Year. Norwegian newspaper, Aftenposten, compared it with Lars von Trier's, Riket, and gave Häxdansen 5 out of 6.
+          </p>
+          <p>
+            Magnus has an open and collaborative approach to all projects and often establishes long term relationships with clients that keep coming back making their collaborations span over many years as with ICA, McDonald's, German retailer EDEKA and Swedish artists Håkan Hellström and The Ark.
+          </p>
+          <p>
+            Magnus also hold a Master's degree in Industrial Engineering and Economics from Chalmers University of Technology and University of California, Berkeley.
+          </p>
+          <p>
+            When he is not writing or shooting Magnus produce high end olive oil from his own estate, Collinadolce, on the Italian east coast.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
