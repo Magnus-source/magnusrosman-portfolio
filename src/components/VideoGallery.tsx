@@ -169,6 +169,13 @@ const videos = [
     category: "longform",
     size: "large"
   },
+  {
+    vimeoId: "1092687228",
+    title: "Don Tommaso",
+    description: "Atalanta BC - December 2024",
+    category: "longform",
+    size: "large"
+  },
 ];
 
 interface VideoGalleryProps {
