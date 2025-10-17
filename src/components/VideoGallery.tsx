@@ -97,6 +97,12 @@ const videos = [
     description: "Priest",
     category: "commercial"
   },
+  {
+    vimeoId: "704557975",
+    title: "AMF",
+    description: "KLF",
+    category: "commercial"
+  },
 ];
 
 interface VideoGalleryProps {
