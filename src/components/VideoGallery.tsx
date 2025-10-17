@@ -176,6 +176,13 @@ const videos = [
     category: "longform",
     size: "large"
   },
+  {
+    vimeoId: "1092687400",
+    title: "Don Tommaso",
+    description: "FC Inter - May 2025",
+    category: "longform",
+    size: "large"
+  },
 ];
 
 interface VideoGalleryProps {
