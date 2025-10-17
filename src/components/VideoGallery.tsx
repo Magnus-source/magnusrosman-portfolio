@@ -16,17 +16,17 @@ const videos = [
     size: "small"
   },
   {
-    vimeoId: "704546507",
-    title: "Håkan Hellström",
-    description: "Din tid kommer",
-    category: "musicvideo",
-    size: "large"
-  },
-  {
     vimeoId: "704554813",
     title: "Spies",
     description: "Priest",
     category: "commercial",
+    size: "large"
+  },
+  {
+    vimeoId: "704546507",
+    title: "Håkan Hellström",
+    description: "Din tid kommer",
+    category: "musicvideo",
     size: "large"
   },
   {
