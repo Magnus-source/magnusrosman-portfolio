@@ -55,6 +55,12 @@ const videos = [
     description: "Sensory journey through culinary artistry",
     category: "commercial"
   },
+  {
+    vimeoId: "707235736",
+    title: "ICA",
+    description: "Pasqual gör entré",
+    category: "commercial"
+  },
 ];
 
 interface VideoGalleryProps {
