@@ -32,6 +32,12 @@ const videos = [
     category: "longform"
   },
   {
+    vimeoId: "742323349",
+    title: "Häxdansen",
+    description: "6 episode TV-series",
+    category: "longform"
+  },
+  {
     vimeoId: "148751763",
     title: "Fashion Film",
     description: "Cinematic exploration of style and elegance",
