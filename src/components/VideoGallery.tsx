@@ -2,45 +2,17 @@ import VideoCard from "./VideoCard";
 
 const videos = [
   {
-    vimeoId: "1081950900",
-    title: "Ice Hockey World Championships 2025",
-    description: "Television commercial",
+    vimeoId: "704553615",
+    title: "DHL",
+    description: "Meeting",
     category: "commercial",
-    size: "large" // wide tile
-  },
-  {
-    vimeoId: "1092688022",
-    title: "When We Were Kings - Avslutet",
-    description: "Documentary, 4 episodes",
-    category: "longform",
-    size: "large" // wide tile
-  },
-  {
-    vimeoId: "742323349",
-    title: "Häxdansen",
-    description: "TV-series, Omklädningsrummet",
-    category: "longform",
-    size: "small" // regular tile
-  },
-  {
-    vimeoId: "742323479",
-    title: "Häxdansen",
-    description: "TV-series, Bussen",
-    category: "longform",
-    size: "small"
-  },
-  {
-    vimeoId: "742323562",
-    title: "Häxdansen",
-    description: "TV-series, Källaren",
-    category: "longform",
     size: "large"
   },
   {
-    vimeoId: "955476760",
-    title: "Touch me",
-    description: "Weeping Willows",
-    category: "musicvideo",
+    vimeoId: "704553867",
+    title: "DHL",
+    description: "Water cooler",
+    category: "commercial",
     size: "small"
   },
   {
@@ -51,18 +23,32 @@ const videos = [
     size: "large"
   },
   {
-    vimeoId: "704551039",
-    title: "NetOnNet",
-    description: "Så mycket bättre",
-    category: "commercial",
-    size: "small"
-  },
-  {
     vimeoId: "704554813",
     title: "Spies",
     description: "Priest",
     category: "commercial",
     size: "large"
+  },
+  {
+    vimeoId: "1081950900",
+    title: "Ice Hockey World Championships 2025",
+    description: "Television commercial",
+    category: "commercial",
+    size: "large"
+  },
+  {
+    vimeoId: "955476760",
+    title: "Touch me",
+    description: "Weeping Willows",
+    category: "musicvideo",
+    size: "small"
+  },
+  {
+    vimeoId: "704551039",
+    title: "NetOnNet",
+    description: "Så mycket bättre",
+    category: "commercial",
+    size: "small"
   },
   {
     vimeoId: "704542881",
@@ -75,20 +61,6 @@ const videos = [
     vimeoId: "704557975",
     title: "AMF",
     description: "KLF",
-    category: "commercial",
-    size: "small"
-  },
-  {
-    vimeoId: "704553615",
-    title: "DHL",
-    description: "Meeting",
-    category: "commercial",
-    size: "large"
-  },
-  {
-    vimeoId: "704553867",
-    title: "DHL",
-    description: "Water cooler",
     category: "commercial",
     size: "small"
   },
@@ -161,6 +133,34 @@ const videos = [
     description: "Trucken",
     category: "commercial",
     size: "small"
+  },
+  {
+    vimeoId: "1092688022",
+    title: "When We Were Kings - Avslutet",
+    description: "Documentary, 4 episodes",
+    category: "longform",
+    size: "large"
+  },
+  {
+    vimeoId: "742323349",
+    title: "Häxdansen",
+    description: "TV-series, Omklädningsrummet",
+    category: "longform",
+    size: "small"
+  },
+  {
+    vimeoId: "742323479",
+    title: "Häxdansen",
+    description: "TV-series, Bussen",
+    category: "longform",
+    size: "small"
+  },
+  {
+    vimeoId: "742323562",
+    title: "Häxdansen",
+    description: "TV-series, Källaren",
+    category: "longform",
+    size: "large"
   },
 ];
 
