@@ -86,7 +86,7 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
           <div className="relative w-full h-full">
             <iframe
               ref={iframeRef}
-              src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0&outro=0`}
+              src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0&vimeo_logo=0&dnt=1`}
               className={`w-full h-full transition-opacity duration-200 ${hasEnded ? 'opacity-0' : 'opacity-100'}`}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
