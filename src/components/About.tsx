@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import magnusPortrait from "@/assets/magnus-portrait.png";
 
 const About = () => {
   return <section id="about" className="py-24 px-6 bg-secondary/30">
@@ -11,17 +11,11 @@ const About = () => {
           {/* Portrait */}
           <div className="flex justify-center md:justify-start">
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
-              {/* Placeholder - replace with actual image */}
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary to-card">
-                <User className="w-24 h-24 text-primary/40" />
-              </div>
-              {/* Uncomment and use this when you have your photo:
               <img 
-                src="/path-to-your-photo.jpg" 
-                alt="Magnus Rösman"
+                src={magnusPortrait} 
+                alt="Magnus Rösman - Director and Producer"
                 className="w-full h-full object-cover"
               />
-              */}
             </div>
           </div>
 
