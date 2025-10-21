@@ -1,5 +1,6 @@
 import magnusPortrait from "@/assets/magnus-portrait.png";
 import hakanRockBjorn from "@/assets/hakan-rock-bjorn.jpeg";
+import oliveOilProduction from "@/assets/olive-oil-production.png";
 const About = () => {
   return <section id="about" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
@@ -19,11 +20,9 @@ const About = () => {
               <img src={hakanRockBjorn} alt="Håkan Hellström with Rock-Björn award" className="w-full h-full object-cover" />
             </div>
             
-            {/* Placeholder image 2 */}
+            {/* Olive oil production at Collinadolce */}
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
-              <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
-                Placeholder 2
-              </div>
+              <img src={oliveOilProduction} alt="Olive oil production at Collinadolce estate" className="w-full h-full object-cover" />
             </div>
           </div>
 
