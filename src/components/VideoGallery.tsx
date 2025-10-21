@@ -19,12 +19,12 @@ const featuredOrder = [
   "707234831", // ICA Påsken när Stig var ung
   "707234991", // ICA 300:e filmen
   "707235178", // ICA Rosa bandet
+  "707235111", // ICA EMD
   "742323562", // Häxdansen Källaren
   "707235736", // ICA Pasqual gör entré
   "707235622", // ICA Pasqual testimonial
-  "707235111", // ICA EMD
-  "1092687400", // Don Tommaso FC Inter
   "707235412", // ICA Pasqual vs Sebastian
+  "1092687400", // Don Tommaso FC Inter
   "707235271", // ICA Ulf träffar Ulf
   "1092687228", // Don Tommaso Atalanta BC
   "1092687322", // Don Tommaso AC Milan
