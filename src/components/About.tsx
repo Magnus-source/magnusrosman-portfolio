@@ -8,14 +8,28 @@ const About = () => {
         </h2>
         
         <div className="grid md:grid-cols-[300px_1fr] lg:grid-cols-[400px_1fr] gap-12 items-start">
-          {/* Portrait */}
-          <div className="flex justify-center md:justify-start">
+          {/* Portrait and additional images */}
+          <div className="flex flex-col gap-6 justify-center md:justify-start">
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
               <img 
                 src={magnusPortrait} 
                 alt="Magnus Rösman - Director and Producer"
                 className="w-full h-full object-cover"
               />
+            </div>
+            
+            {/* Placeholder image 1 */}
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+              <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
+                Placeholder 1
+              </div>
+            </div>
+            
+            {/* Placeholder image 2 */}
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+              <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
+                Placeholder 2
+              </div>
             </div>
           </div>
 
