@@ -1,4 +1,5 @@
 import magnusPortrait from "@/assets/magnus-portrait.png";
+import hakanRockBjorn from "@/assets/hakan-rock-bjorn.jpeg";
 
 const About = () => {
   return <section id="about" className="py-24 px-6 bg-secondary/30">
@@ -18,11 +19,13 @@ const About = () => {
               />
             </div>
             
-            {/* Placeholder image 1 */}
+            {/* Håkan with Rock-Björn */}
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
-              <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
-                Placeholder 1
-              </div>
+              <img 
+                src={hakanRockBjorn} 
+                alt="Håkan Hellström with Rock-Björn award"
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Placeholder image 2 */}
