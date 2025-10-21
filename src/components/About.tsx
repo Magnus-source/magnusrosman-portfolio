@@ -5,7 +5,7 @@ const About = () => {
           About
         </h2>
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-          <p>Since 1999 Magnus has created entertaining commercials, music videos, tv-series and documentaries with a warm human touch often finding the laugh in life's mishaps.</p>
+          <p>Since 1999 Magnus has created catchy high-end commercials, music videos, tv-series and documentaries with a warm human touch often finding the laugh in life's mishaps.</p>
           <p>During 2025 Magnus produced the much appreciated 4-part documentary, "When we were kings - Avslutet", about the end of the much loved football podcast with Erik Niva and Håkan Andreason. The documentary premiered on Viaplay in May, 2025.</p>
           <p>
             Strong visual storytelling became Magnus' trade mark in his early career as he won numerous international awards for music videos and commercials for car brands like Mercedes and Honda. Artists include the likes of Turbonegro, The Ark, Håkan Hellström, Jay Jay Johansson and many more.
