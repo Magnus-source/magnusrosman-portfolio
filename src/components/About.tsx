@@ -40,13 +40,13 @@ const About = () => {
               With the dark comedy, Häxdansen, Magnus worked with the absolute elite of Swedish actor's and the 6 episode drama was nominated for Kristallen for Best Drama of the Year. Norwegian newspaper, Aftenposten, compared it with Lars von Trier's, Riket, and gave Häxdansen 5 out of 6.
             </p>
             <p>
-              Magnus has an open and collaborative approach to all projects and often establishes long term relationships with clients that keep coming back making their collaborations span over many years as with ICA, McDonald's, German retailer EDEKA and Swedish artists Håkan Hellström and The Ark.
+              Magnus enjoys working closely with clients and many of them become long-term collaborators—ICA, McDonald's, German retailer EDEKA and Swedish artists Håkan Hellström and The Ark have all worked with him for many years.
             </p>
             <p>
-              Magnus also hold a Master's degree in Industrial Engineering and Economics from Chalmers University of Technology and University of California, Berkeley.
+              Magnus also holds a Master's degree in Industrial Engineering and Economics from Chalmers University of Technology and University of California, Berkeley.
             </p>
             <p>
-              When he is not writing or shooting Magnus produce high end olive oil from his own estate, Collinadolce, on the Italian east coast.
+              When he's not behind the camera, Magnus produces olive oil at his small estate, Collinadolce, on the Italian east coast.
             </p>
           </div>
         </div>
