@@ -1,15 +1,33 @@
 import VideoCard from "./VideoCard";
 
-// Fixed order for the first 8 videos as requested
+// Video order as specified
 const featuredOrder = [
   "704553867", // DHL Watercooler
   "704553615", // DHL Meeting
-  "704546507", // Håkan Hellström Din tid kommer
   "1092688022", // When We Were Kings - Avslutet
+  "704546507", // Håkan Hellström Din tid kommer
   "707235058", // ICA Jamie Oliver
   "704557975", // AMF KLF
-  "704551039", // NetOnNet
-  "742323349", // Häxdansen - Omklädningsrummet
+  "742323349", // Häxdansen Omklädningsrummet
+  "1081950900", // Viaplay Ice Hockey
+  "704551039", // NetOnNet Så mycket bättre
+  "704554813", // Spies Priest
+  "955446551", // ICA Trucken
+  "704542881", // AMF KLF - Full song edit
+  "955476760", // Touch me Weeping Willows
+  "742323479", // Häxdansen Bussen
+  "707234831", // ICA Påsken när Stig var ung
+  "707234991", // ICA 300:e filmen
+  "707235178", // ICA Rosa bandet
+  "742323562", // Häxdansen Källaren
+  "707235736", // ICA Pasqual gör entré
+  "707235622", // ICA Pasqual testimonial
+  "707235111", // ICA EMD
+  "1092687400", // Don Tommaso FC Inter
+  "707235412", // ICA Pasqual vs Sebastian
+  "707235271", // ICA Ulf träffar Ulf
+  "1092687228", // Don Tommaso Atalanta BC
+  "1092687322", // Don Tommaso AC Milan
 ];
 
 const videos = [
