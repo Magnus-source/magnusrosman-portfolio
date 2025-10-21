@@ -10,9 +10,10 @@ interface VideoCardProps {
   title: string;
   description: string;
   className?: string;
+  isHighlighted?: boolean;
 }
 
-const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardProps) => {
+const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted = true }: VideoCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasEnded, setHasEnded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -56,7 +57,7 @@ const VideoCard = ({ vimeoId, title, description, className = "" }: VideoCardPro
 
   return (
     <>
-      <Card className={`group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 h-full rounded-none ${className}`}>
+      <Card className={`group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 h-full rounded-none ${!isHighlighted ? 'opacity-40 grayscale' : ''} ${className}`}>
         <div className="relative h-full overflow-hidden bg-black">
           <img
             src={thumbnailUrl}

@@ -1,18 +1,72 @@
 import VideoCard from "./VideoCard";
 
+// Fixed order for the first 8 videos as requested
+const featuredOrder = [
+  "704553867", // DHL Watercooler
+  "704553615", // DHL Meeting
+  "704546507", // Håkan Hellström Din tid kommer
+  "1092688022", // When We Were Kings - Avslutet
+  "707235058", // ICA Jamie Oliver
+  "704557975", // AMF KLF
+  "704551039", // NetOnNet
+  "742323349", // Häxdansen - Omklädningsrummet
+];
+
 const videos = [
-  {
-    vimeoId: "704553615",
-    title: "DHL",
-    description: "Meeting",
-    category: "commercial",
-    size: "large"
-  },
   {
     vimeoId: "704553867",
     title: "DHL",
     description: "Water cooler",
     category: "commercial",
+    size: "large"
+  },
+  {
+    vimeoId: "704553615",
+    title: "DHL",
+    description: "Meeting",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "704546507",
+    title: "Håkan Hellström",
+    description: "Din tid kommer",
+    category: "musicvideo",
+    size: "large"
+  },
+  {
+    vimeoId: "1092688022",
+    title: "When We Were Kings - Avslutet",
+    description: "Documentary, 4 episodes",
+    category: "longform",
+    size: "small"
+  },
+  {
+    vimeoId: "707235058",
+    title: "ICA",
+    description: "Jamie Oliver",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "704557975",
+    title: "AMF",
+    description: "KLF",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "704551039",
+    title: "NetOnNet",
+    description: "Så mycket bättre",
+    category: "commercial",
+    size: "large"
+  },
+  {
+    vimeoId: "742323349",
+    title: "Häxdansen",
+    description: "TV-series, Omklädningsrummet",
+    category: "longform",
     size: "small"
   },
   {
@@ -23,44 +77,23 @@ const videos = [
     size: "large"
   },
   {
-    vimeoId: "704546507",
-    title: "Håkan Hellström",
-    description: "Din tid kommer",
-    category: "musicvideo",
-    size: "large"
-  },
-  {
     vimeoId: "1081950900",
     title: "Viaplay",
     description: "Ice Hockey World Championship 2025",
     category: "commercial",
-    size: "large"
+    size: "small"
   },
   {
     vimeoId: "955476760",
     title: "Touch me",
     description: "Weeping Willows",
     category: "musicvideo",
-    size: "small"
-  },
-  {
-    vimeoId: "704551039",
-    title: "NetOnNet",
-    description: "Så mycket bättre",
-    category: "commercial",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "704542881",
     title: "AMF",
     description: "KLF - Full song edit",
-    category: "commercial",
-    size: "small"
-  },
-  {
-    vimeoId: "704557975",
-    title: "AMF",
-    description: "KLF",
     category: "commercial",
     size: "small"
   },
@@ -107,13 +140,6 @@ const videos = [
     size: "large"
   },
   {
-    vimeoId: "707235058",
-    title: "ICA",
-    description: "Jamie Oliver",
-    category: "commercial",
-    size: "small"
-  },
-  {
     vimeoId: "707234831",
     title: "ICA",
     description: "Påsken när Stig var ung",
@@ -135,20 +161,6 @@ const videos = [
     size: "small"
   },
   {
-    vimeoId: "1092688022",
-    title: "When We Were Kings - Avslutet",
-    description: "Documentary, 4 episodes",
-    category: "longform",
-    size: "large"
-  },
-  {
-    vimeoId: "742323349",
-    title: "Häxdansen",
-    description: "TV-series, Omklädningsrummet",
-    category: "longform",
-    size: "small"
-  },
-  {
     vimeoId: "742323479",
     title: "Häxdansen",
     description: "TV-series, Bussen",
@@ -167,7 +179,7 @@ const videos = [
     title: "Don Tommaso",
     description: "AC Milan - September 2024",
     category: "longform",
-    size: "large"
+    size: "small"
   },
   {
     vimeoId: "1092687228",
@@ -181,7 +193,7 @@ const videos = [
     title: "Don Tommaso",
     description: "FC Inter - May 2025",
     category: "longform",
-    size: "large"
+    size: "small"
   },
 ];
 
@@ -190,9 +202,16 @@ interface VideoGalleryProps {
 }
 
 const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
-  const sortedVideos = [...videos].sort((a, b) => {
-    if (a.category === activeCategory && b.category !== activeCategory) return -1;
-    if (a.category !== activeCategory && b.category === activeCategory) return 1;
+  // Sort videos: featured first in specific order, then the rest
+  const orderedVideos = [...videos].sort((a, b) => {
+    const aIndex = featuredOrder.indexOf(a.vimeoId);
+    const bIndex = featuredOrder.indexOf(b.vimeoId);
+    
+    if (aIndex !== -1 && bIndex !== -1) {
+      return aIndex - bIndex;
+    }
+    if (aIndex !== -1) return -1;
+    if (bIndex !== -1) return 1;
     return 0;
   });
 
@@ -200,10 +219,11 @@ const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
     <section className="py-12 px-6 min-h-screen">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[400px]">
-          {sortedVideos.map((video, index) => (
+          {orderedVideos.map((video, index) => (
             <VideoCard 
               key={index} 
               {...video}
+              isHighlighted={video.category === activeCategory}
               className={video.size === "large" ? "md:col-span-2" : "md:col-span-1"}
             />
           ))}
