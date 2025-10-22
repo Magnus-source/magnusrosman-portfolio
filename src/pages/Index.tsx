@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const [activeCategory, setActiveCategory] = useState("commercial");
+  const [activeCategory, setActiveCategory] = useState("");
 
   return (
     <div className="min-h-screen">

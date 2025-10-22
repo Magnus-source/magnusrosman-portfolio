@@ -241,7 +241,7 @@ const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
             <VideoCard 
               key={index} 
               {...video}
-              isHighlighted={video.category === activeCategory}
+              isHighlighted={!activeCategory || video.category === activeCategory}
               className={video.size === "large" ? "md:col-span-2" : "md:col-span-1"}
             />
           ))}

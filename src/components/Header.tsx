@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 interface HeaderProps {
-  activeCategory: string;
+  activeCategory: string | null;
   onCategoryChange: (category: string) => void;
 }
 
