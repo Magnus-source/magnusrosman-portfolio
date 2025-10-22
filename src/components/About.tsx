@@ -43,7 +43,7 @@ const About = () => {
               Magnus enjoys working closely with clients and many of them become long-term collaborators—ICA, McDonald's, German retailer EDEKA and Swedish artists Håkan Hellström and The Ark have all worked with him for many years.
             </p>
             <p>
-              Magnus also holds a Master's degree in Industrial Engineering and Economics from Chalmers University of Technology and University of California, Berkeley. Today, he's combining that technical background with his creative expertise by studying AI and Machine Learning—exploring how generative AI can amplify creativity and make production more efficient.
+              Magnus Rösman also holds a Master's degree in Industrial Engineering and Economics from Chalmers University of Technology and University of California, Berkeley. Today, he's combining that technical background with his creative expertise by studying AI and Machine Learning—exploring how generative AI can amplify creativity and make production more efficient.
             </p>
             <p>
               When he's not behind the camera, Magnus produces olive oil at his small estate, Collinadolce, on the Italian east coast.
