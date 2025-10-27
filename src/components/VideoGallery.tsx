@@ -213,6 +213,20 @@ const videos = [
     category: "longform",
     size: "small"
   },
+  {
+    vimeoId: "1130892585",
+    title: "EDEKA",
+    description: "Käsekenner",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "1130892599",
+    title: "EDEKA",
+    description: "Waage",
+    category: "commercial",
+    size: "small"
+  },
 ];
 
 interface VideoGalleryProps {
