@@ -1,5 +1,7 @@
 import magnusPortrait from "@/assets/magnus-portrait.png";
+import erikNiva from "@/assets/erik-niva.png";
 import hakanRockBjorn from "@/assets/hakan-rock-bjorn.jpeg";
+import icaStig from "@/assets/ica-stig.png";
 import oliveOilProduction from "@/assets/olive-oil-production.png";
 const About = () => {
   return <section id="about" className="py-24 px-6 bg-secondary/30">
@@ -11,13 +13,24 @@ const About = () => {
         <div className="grid md:grid-cols-[300px_1fr] lg:grid-cols-[400px_1fr] gap-12 items-start">
           {/* Portrait and additional images */}
           <div className="flex flex-col gap-6 justify-center md:justify-start">
+            {/* Magnus portrait */}
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
               <img src={magnusPortrait} alt="Magnus Rösman - Director and Producer" className="w-full h-full object-cover" />
             </div>
             
-            {/* Håkan with Rock-Björn */}
+            {/* Erik Niva */}
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+              <img src={erikNiva} alt="Erik Niva from When We Were Kings documentary" className="w-full h-full object-cover" />
+            </div>
+            
+            {/* Håkan Hellström with Rock-Björn */}
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
               <img src={hakanRockBjorn} alt="Håkan Hellström with Rock-Björn award" className="w-full h-full object-cover" />
+            </div>
+            
+            {/* ICA-Stig */}
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+              <img src={icaStig} alt="ICA-Stig from the iconic ICA commercials" className="w-full h-full object-cover" />
             </div>
             
             {/* Olive oil production at Collinadolce */}
