@@ -7,7 +7,7 @@ const About = () => {
   return <section id="about" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
-          Magnus Rösman - Award-Winning Film Director
+          Magnus Rösman - Writer & Director
         </h1>
         
         <div className="grid md:grid-cols-[300px_1fr] lg:grid-cols-[400px_1fr] gap-12 items-start">
