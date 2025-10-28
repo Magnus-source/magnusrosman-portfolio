@@ -26,6 +26,7 @@ const featuredOrder = [
   "707235412", // ICA Pasqual vs Sebastian
   "1092687400", // Don Tommaso FC Inter
   "707235271", // ICA Ulf träffar Ulf
+  "1131315757", // Collector Bank Barcelona
   "1092687228", // Don Tommaso Atalanta BC
   "1092687322", // Don Tommaso AC Milan
 ];
@@ -224,6 +225,13 @@ const videos = [
     vimeoId: "1130892599",
     title: "EDEKA",
     description: "Waage",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "1131315757",
+    title: "Collector Bank",
+    description: "Barcelona",
     category: "commercial",
     size: "small"
   },
