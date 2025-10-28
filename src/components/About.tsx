@@ -62,7 +62,7 @@ const About = () => {
             <p>Magnus Rösman holds a <strong>Master's degree in Industrial Engineering and Economics</strong> from Chalmers University of Technology and University of California, Berkeley. Today, he's combining that technical background with his creative expertise by studying <strong>AI and Machine Learning</strong>—exploring how generative AI can amplify creativity and make film production more efficient.</p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Life Beyond Filmmaking</h2>
-            <p>When he's not behind the camera directing commercials or drama series, Magnus produces olive oil at his small estate, <strong>Collinadolce</strong>, on the Italian east coast. He also gives talks on creativity, including his recent presentation <strong>"The Power of Constraints: How Constraints Unleash Creativity."</strong></p>
+            <p>When he's not behind the camera directing commercials or drama series, Magnus produces olive oil at his small estate, <strong>Collinadolce</strong>, on the Italian east coast. He also gives talks on creativity, including his recent presentation <strong>"The Power of Constraints: How To Unleash Creativity."</strong></p>
           </div>
         </div>
       </div>
