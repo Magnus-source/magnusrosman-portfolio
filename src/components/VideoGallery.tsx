@@ -242,6 +242,13 @@ const videos = [
     category: "longform",
     size: "large"
   },
+  {
+    vimeoId: "1132187204",
+    title: "Håkan Hellström",
+    description: "Nu kan du få mig så lätt",
+    category: "musicvideo",
+    size: "small"
+  },
 ];
 
 interface VideoGalleryProps {
