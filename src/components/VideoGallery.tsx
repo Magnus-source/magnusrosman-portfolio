@@ -55,7 +55,7 @@ const videos = [
   },
   {
     vimeoId: "1092688022",
-    title: "When We Were Kings - Avslutet",
+    title: "When We Were Kings - Avskedet",
     description: "Documentary, 4 episodes",
     category: "longform",
     size: "small"
