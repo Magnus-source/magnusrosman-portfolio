@@ -276,6 +276,13 @@ const videos = [
     category: "musicvideo",
     size: "small"
   },
+  {
+    vimeoId: "1132292382",
+    title: "Lisa Miskovsky",
+    description: "Driving one of your cars",
+    category: "musicvideo",
+    size: "large"
+  },
 ];
 
 interface VideoGalleryProps {
