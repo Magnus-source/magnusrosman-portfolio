@@ -235,6 +235,13 @@ const videos = [
     category: "commercial",
     size: "small"
   },
+  {
+    vimeoId: "1132158873",
+    title: "When We Were Kings - Documentary, Teaser",
+    description: "Teaser",
+    category: "longform",
+    size: "large"
+  },
 ];
 
 interface VideoGalleryProps {
