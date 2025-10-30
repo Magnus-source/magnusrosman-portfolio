@@ -205,7 +205,14 @@ const videos = [
     title: "Don Tommaso",
     description: "Atalanta BC - December 2024",
     category: "longform",
-    size: "large"
+    size: "small"
+  },
+  {
+    vimeoId: "1132202296",
+    title: "Jay-Jay Johanson",
+    description: "On the radio",
+    category: "musicvideo",
+    size: "small"
   },
   {
     vimeoId: "1092687400",
