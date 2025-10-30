@@ -59,6 +59,24 @@ const About = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Long-Term Creative Collaborations</h2>
             <p>Magnus enjoys working closely with clients, and many become long-term creative partners. <strong>ICA</strong>, <strong>McDonald's</strong>, German retailer <strong>EDEKA</strong>, and Swedish artists <strong>Håkan Hellström</strong>, <strong>The Ark</strong>, and <strong>Hardcore Superstar</strong> have all collaborated with him for many years, trusting his creative vision and storytelling expertise.</p>
 
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Music Videos</h2>
+            
+            <div className="my-8">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Håkan Hellström - Nu kan du få mig så lätt</h3>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/h2bVXorNRAY"
+                  title="Håkan Hellström - Nu kan du få mig så lätt"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              </div>
+            </div>
+
             <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Technical Background Meets Creative Innovation</h2>
             <p>Magnus Rösman holds a <strong>Master's degree in Industrial Engineering and Economics</strong> from Chalmers University of Technology and University of California, Berkeley. Today, he's combining that technical background with his creative expertise by studying <strong>AI and Machine Learning</strong>—exploring how generative AI can amplify creativity and make film production more efficient.</p>
 
