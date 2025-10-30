@@ -237,8 +237,8 @@ const videos = [
   },
   {
     vimeoId: "1132158873",
-    title: "When We Were Kings - Documentary, Teaser",
-    description: "Teaser",
+    title: "When We Were Kings - Avskedet",
+    description: "Episode 1, Teaser",
     category: "longform",
     size: "large"
   },
