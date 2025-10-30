@@ -18,7 +18,7 @@ const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted 
   const [hasEnded, setHasEnded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<Player | null>(null);
-  const thumbnailUrl = `https://vumbnail.com/${vimeoId}_large.jpg?v=${Date.now()}`;
+  const thumbnailUrl = `https://vumbnail.com/${vimeoId}_large.jpg?v=${Date.now()}&r=${Math.random()}`;
 
   useEffect(() => {
     if (isOpen && iframeRef.current && !playerRef.current) {
