@@ -28,7 +28,6 @@ const featuredOrder = [
   "707235271", // ICA Ulf träffar Ulf
   "1131315757", // Collector Bank Barcelona
   "1092687228", // Don Tommaso Atalanta BC
-  "1092687322", // Don Tommaso AC Milan
 ];
 
 const videos = [
@@ -248,13 +247,6 @@ const videos = [
     description: "Episode 1, Teaser",
     category: "longform",
     size: "large"
-  },
-  {
-    vimeoId: "1092687322",
-    title: "Don Tommaso",
-    description: "AC Milan - September 2024",
-    category: "longform",
-    size: "small"
   },
   {
     vimeoId: "1132215073",
