@@ -249,6 +249,13 @@ const videos = [
     category: "musicvideo",
     size: "small"
   },
+  {
+    vimeoId: "1132215073",
+    title: "Hardcore Superstar",
+    description: "Liberation",
+    category: "musicvideo",
+    size: "large"
+  },
 ];
 
 interface VideoGalleryProps {
