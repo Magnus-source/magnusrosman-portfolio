@@ -2,6 +2,7 @@ import magnusPortrait from "@/assets/magnus-portrait.png";
 import erikNiva from "@/assets/erik-niva.png";
 import hakanRockBjorn from "@/assets/hakan-rock-bjorn.jpeg";
 import icaStig from "@/assets/ica-stig.png";
+import hakanOrangeJacket from "@/assets/hakan-orange-jacket.png";
 import oliveOilProduction from "@/assets/olive-oil-production.png";
 const About = () => {
   return <section id="about" className="py-24 px-6 bg-secondary/30">
@@ -31,6 +32,11 @@ const About = () => {
             {/* ICA-Stig */}
             <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
               <img src={icaStig} alt="ICA-Stig from the iconic ICA commercials" className="w-full h-full object-cover" />
+            </div>
+            
+            {/* Håkan Hellström in orange jacket */}
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+              <img src={hakanOrangeJacket} alt="Håkan Hellström music video production" className="w-full h-full object-cover" />
             </div>
             
             {/* Olive oil production at Collinadolce */}
