@@ -249,6 +249,13 @@ const videos = [
     size: "large"
   },
   {
+    vimeoId: "1132198534",
+    title: "Håkan Hellström",
+    description: "Den fulaste flickan i världen",
+    category: "musicvideo",
+    size: "small"
+  },
+  {
     vimeoId: "1132215073",
     title: "Hardcore Superstar",
     description: "Liberation",
