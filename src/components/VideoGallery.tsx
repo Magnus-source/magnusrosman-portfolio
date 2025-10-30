@@ -194,10 +194,10 @@ const videos = [
     size: "large"
   },
   {
-    vimeoId: "1092687322",
-    title: "Don Tommaso",
-    description: "AC Milan - September 2024",
-    category: "longform",
+    vimeoId: "1132187204",
+    title: "Håkan Hellström",
+    description: "Nu kan du få mig så lätt",
+    category: "musicvideo",
     size: "small"
   },
   {
@@ -250,10 +250,10 @@ const videos = [
     size: "large"
   },
   {
-    vimeoId: "1132187204",
-    title: "Håkan Hellström",
-    description: "Nu kan du få mig så lätt",
-    category: "musicvideo",
+    vimeoId: "1092687322",
+    title: "Don Tommaso",
+    description: "AC Milan - September 2024",
+    category: "longform",
     size: "small"
   },
   {
