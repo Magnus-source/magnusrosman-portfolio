@@ -262,6 +262,13 @@ const videos = [
     category: "musicvideo",
     size: "large"
   },
+  {
+    vimeoId: "1132289017",
+    title: "The Ark",
+    description: "It takes a fool to remain sane",
+    category: "musicvideo",
+    size: "small"
+  },
 ];
 
 interface VideoGalleryProps {
