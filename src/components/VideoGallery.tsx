@@ -269,6 +269,13 @@ const videos = [
     category: "musicvideo",
     size: "small"
   },
+  {
+    vimeoId: "1132290549",
+    title: "Håkan Hellström",
+    description: "Ramlar",
+    category: "musicvideo",
+    size: "small"
+  },
 ];
 
 interface VideoGalleryProps {
