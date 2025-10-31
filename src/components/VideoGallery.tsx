@@ -50,7 +50,7 @@ const videos = [
     title: "Håkan Hellström",
     description: "Din tid kommer",
     category: "musicvideo",
-    size: "large"
+    size: "small"
   },
   {
     vimeoId: "707235058",
