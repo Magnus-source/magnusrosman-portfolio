@@ -193,6 +193,13 @@ const videos = [
     size: "small"
   },
   {
+    vimeoId: "1092688022",
+    title: "When We Were Kings - Avskedet",
+    description: "4 episodes, Documentary",
+    category: "longform",
+    size: "large"
+  },
+  {
     vimeoId: "1092687228",
     title: "Don Tommaso",
     description: "Atalanta BC - December 2024",
