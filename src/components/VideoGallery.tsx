@@ -225,7 +225,7 @@ const videos = [
     title: "EDEKA",
     description: "Waage",
     category: "commercial",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "1131315757",
