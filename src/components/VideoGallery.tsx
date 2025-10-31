@@ -183,7 +183,7 @@ const videos = [
     title: "Häxdansen",
     description: "TV-series, Bussen",
     category: "longform",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "742323562",
