@@ -304,6 +304,13 @@ const videos = [
     category: "commercial",
     size: "small"
   },
+  {
+    vimeoId: "1132431044",
+    title: "ICA",
+    description: "Praktikanten",
+    category: "commercial",
+    size: "small"
+  },
 ];
 
 interface VideoGalleryProps {
