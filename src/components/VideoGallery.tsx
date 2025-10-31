@@ -260,7 +260,7 @@ const videos = [
     title: "The Ark",
     description: "It takes a fool to remain sane",
     category: "musicvideo",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "1132290549",
