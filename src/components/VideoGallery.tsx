@@ -11,6 +11,7 @@ const featuredOrder = [
   "742323349", // Häxdansen Omklädningsrummet
   "1081950900", // Viaplay Ice Hockey
   "704551039", // NetOnNet Så mycket bättre
+  "955439685", // SSC The knife
   "704554813", // Spies Priest
   "955446551", // ICA Trucken
   "704542881", // AMF KLF - Full song edit
@@ -71,6 +72,13 @@ const videos = [
     description: "Så mycket bättre",
     category: "commercial",
     size: "large"
+  },
+  {
+    vimeoId: "955439685",
+    title: "SSC",
+    description: "The knife",
+    category: "musicvideo",
+    size: "small"
   },
   {
     vimeoId: "742323349",
