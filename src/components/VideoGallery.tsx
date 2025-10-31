@@ -85,7 +85,7 @@ const videos = [
     title: "Häxdansen",
     description: "TV-series, Omklädningsrummet",
     category: "longform",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "704554813",
