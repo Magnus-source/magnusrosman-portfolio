@@ -23,7 +23,6 @@ const featuredOrder = [
   "742323562", // Häxdansen Källaren
   "707235736", // ICA Pasqual gör entré
   "707235622", // ICA Pasqual testimonial
-  "707235412", // ICA Pasqual vs Sebastian
   "1092687400", // Don Tommaso FC Inter
   "707235271", // ICA Ulf träffar Ulf
   "1131315757", // Collector Bank Barcelona
@@ -121,13 +120,6 @@ const videos = [
     description: "Pasqual gör entré",
     category: "commercial",
     size: "small"
-  },
-  {
-    vimeoId: "707235412",
-    title: "ICA",
-    description: "Pasqual vs Sebastian",
-    category: "commercial",
-    size: "large"
   },
   {
     vimeoId: "707234991",
