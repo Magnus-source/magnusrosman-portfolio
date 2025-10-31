@@ -234,13 +234,6 @@ const videos = [
     size: "small"
   },
   {
-    vimeoId: "1132158873",
-    title: "When We Were Kings - Avskedet",
-    description: "Episode 1, Teaser",
-    category: "longform",
-    size: "large"
-  },
-  {
     vimeoId: "1132198534",
     title: "Håkan Hellström",
     description: "Den fulaste flickan i världen",
