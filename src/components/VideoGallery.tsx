@@ -4,7 +4,6 @@ import VideoCard from "./VideoCard";
 const featuredOrder = [
   "704553867", // DHL Watercooler
   "704553615", // DHL Meeting
-  "1092688022", // When We Were Kings - Avslutet
   "704546507", // Håkan Hellström Din tid kommer
   "707235058", // ICA Jamie Oliver
   "704557975", // AMF KLF
@@ -51,13 +50,6 @@ const videos = [
     description: "Din tid kommer",
     category: "musicvideo",
     size: "large"
-  },
-  {
-    vimeoId: "1092688022",
-    title: "When We Were Kings - Avskedet",
-    description: "Documentary, 4 episodes",
-    category: "longform",
-    size: "small"
   },
   {
     vimeoId: "707235058",
