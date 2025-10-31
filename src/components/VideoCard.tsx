@@ -4,6 +4,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Play, X, RotateCcw } from "lucide-react";
 import Player from "@vimeo/player";
+import { useVimeoThumbnail } from "@/hooks/useVimeoThumbnail";
 
 interface VideoCardProps {
   vimeoId: string;
@@ -18,7 +19,7 @@ const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted 
   const [hasEnded, setHasEnded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<Player | null>(null);
-  const thumbnailUrl = `https://vumbnail.com/${vimeoId}_large.jpg?v=${Date.now()}&r=${Math.random()}`;
+  const { thumbnailUrl, isLoading } = useVimeoThumbnail(vimeoId);
 
   useEffect(() => {
     if (isOpen && iframeRef.current && !playerRef.current) {
@@ -59,12 +60,14 @@ const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted 
     <>
       <Card className={`group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 h-full rounded-none ${!isHighlighted ? 'opacity-40 grayscale' : ''} ${className}`}>
         <div className="relative h-full overflow-hidden bg-black">
-          <img
-            src={thumbnailUrl}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-          />
+          {!isLoading && thumbnailUrl && (
+            <img
+              src={thumbnailUrl}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+          )}
           <div 
             className="absolute inset-0 flex flex-col items-start justify-start p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent cursor-pointer transition-all duration-300 group-hover:bg-black/50"
             onClick={handlePlay}
