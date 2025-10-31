@@ -47,7 +47,7 @@ const About = () => {
 
           {/* Bio Text */}
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>Magnus Rösman is a Swedish film director whose work since 1999 spans commercials, music videos, television drama, and documentary. His signature style combines emotional warmth with an ability to find the comedy in life's small disasters.</p>
+            <p><strong>Magnus Rösman</strong> is a <strong>Swedish film director</strong> whose work since 1999 spans <strong>commercials, music videos, television drama, and documentary</strong>. His signature style combines emotional warmth with an ability to find the comedy in life's small disasters.</p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Recent Work: Documentary Filmmaker</h2>
             <p>During 2025, Magnus produced and directed the 4-part documentary series, <strong>"When We Were Kings - Avskedet"</strong>, chronicling the end of the beloved football podcast hosted by Erik Niva and Håkan Andreason. The documentary premiered on Viaplay in May 2025 to widespread appreciation.</p>
