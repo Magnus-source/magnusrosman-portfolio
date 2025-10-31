@@ -148,7 +148,7 @@ const videos = [
     title: "ICA",
     description: "Ulf träffar Ulf",
     category: "commercial",
-    size: "large"
+    size: "small"
   },
   {
     vimeoId: "707234831",
