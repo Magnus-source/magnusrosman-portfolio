@@ -113,7 +113,7 @@ const videos = [
     title: "ICA",
     description: "Pasqual testimonial",
     category: "commercial",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "707235736",
