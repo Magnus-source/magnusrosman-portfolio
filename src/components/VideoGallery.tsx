@@ -64,7 +64,7 @@ const videos = [
     title: "ICA",
     description: "Jamie Oliver",
     category: "commercial",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "704557975",
