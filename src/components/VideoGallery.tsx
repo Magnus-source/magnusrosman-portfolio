@@ -232,7 +232,7 @@ const videos = [
     title: "Collector Bank",
     description: "Barcelona",
     category: "commercial",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "1132158873",
