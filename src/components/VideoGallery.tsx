@@ -225,7 +225,7 @@ const videos = [
     title: "EDEKA",
     description: "Käsekenner",
     category: "commercial",
-    size: "small"
+    size: "large"
   },
   {
     vimeoId: "1130892599",
