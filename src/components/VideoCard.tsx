@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Play, X, RotateCcw } from "lucide-react";
+import { Play, RotateCcw } from "lucide-react";
 import Player from "@vimeo/player";
 import { useVimeoThumbnail } from "@/hooks/useVimeoThumbnail";
 
@@ -19,17 +18,15 @@ const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted 
   const [hasEnded, setHasEnded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<Player | null>(null);
-  const { thumbnailUrl, isLoading } = useVimeoThumbnail(vimeoId);
+  const { thumbnailUrl, isLoading, containerRef } = useVimeoThumbnail(vimeoId);
 
   useEffect(() => {
     if (isOpen && iframeRef.current && !playerRef.current) {
       playerRef.current = new Player(iframeRef.current);
-      
-      playerRef.current.on('ended', () => {
+      playerRef.current.on("ended", () => {
         setHasEnded(true);
       });
     }
-
     return () => {
       if (playerRef.current) {
         playerRef.current.destroy();
@@ -58,32 +55,43 @@ const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted 
 
   return (
     <>
-      <Card className={`group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 h-full rounded-none ${!isHighlighted ? 'opacity-40 grayscale' : ''} ${className}`}>
-        <div className="relative h-full overflow-hidden bg-black">
-          {!isLoading && thumbnailUrl && (
-            <img
-              src={thumbnailUrl}
-              alt={title}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-            />
-          )}
-          <div 
-            className="absolute inset-0 flex flex-col items-start justify-start p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent cursor-pointer transition-all duration-300 group-hover:bg-black/50"
-            onClick={handlePlay}
-          >
-            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white text-left drop-shadow-lg mb-2">
-              {title}
-            </h3>
-            <p className="text-white/90 text-xs md:text-sm text-left drop-shadow-lg max-w-md">
-              {description}
-            </p>
-            <div className="mt-auto mb-4 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/30 self-center">
-              <Play className="w-8 h-8 text-white fill-white ml-1" />
-            </div>
+      <div
+        ref={containerRef}
+        className={`group relative overflow-hidden h-full cursor-pointer transition-opacity duration-500 ${
+          !isHighlighted ? "opacity-20" : "opacity-100"
+        } ${className}`}
+        onClick={handlePlay}
+      >
+        {/* Thumbnail */}
+        {isLoading && <div className="absolute inset-0 bg-zinc-900 animate-pulse" />}
+        {thumbnailUrl && (
+          <img
+            src={thumbnailUrl}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            loading="lazy"
+          />
+        )}
+
+        {/* Permanent gradient for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+
+        {/* Hover darkening */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-500" />
+
+        {/* Text — bottom left */}
+        <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
+          <p className="text-[10px] text-white/50 uppercase tracking-[0.2em] mb-1.5">{description}</p>
+          <h3 className="text-sm md:text-base font-light text-white tracking-wide leading-snug">{title}</h3>
+        </div>
+
+        {/* Play icon — centre, fades in on hover */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="w-12 h-12 border border-white/50 rounded-full flex items-center justify-center">
+            <Play className="w-4 h-4 text-white fill-white ml-0.5" />
           </div>
         </div>
-      </Card>
+      </div>
 
       <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="max-w-[95vw] w-full h-[90vh] p-0 bg-black border-none">
@@ -91,29 +99,21 @@ const VideoCard = ({ vimeoId, title, description, className = "", isHighlighted 
             <iframe
               ref={iframeRef}
               src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0&vimeo_logo=0&dnt=1`}
-              className={`w-full h-full transition-opacity duration-200 ${hasEnded ? 'opacity-0' : 'opacity-100'}`}
+              className={`w-full h-full transition-opacity duration-200 ${hasEnded ? "opacity-0" : "opacity-100"}`}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             />
             {hasEnded && (
               <div className="fixed inset-0 flex flex-col items-center justify-center bg-black z-[9999]">
-                <h3 className="text-2xl font-bold text-white mb-8">{title}</h3>
+                <h3 className="text-xl font-light tracking-widest uppercase text-white mb-8">{title}</h3>
                 <div className="flex gap-4">
-                  <Button
-                    onClick={handleReplay}
-                    size="lg"
-                    className="gap-2"
-                  >
-                    <RotateCcw className="w-5 h-5" />
-                    Spela igen
+                  <Button onClick={handleReplay} size="lg" className="gap-2 tracking-widest uppercase text-xs">
+                    <RotateCcw className="w-4 h-4" />
+                    Play again
                   </Button>
-                  <Button
-                    onClick={handleClose}
-                    variant="outline"
-                    size="lg"
-                  >
-                    Stäng
+                  <Button onClick={handleClose} variant="outline" size="lg" className="tracking-widest uppercase text-xs">
+                    Close
                   </Button>
                 </div>
               </div>

@@ -15,32 +15,32 @@ const About = () => {
           {/* Portrait and additional images */}
           <div className="flex flex-col gap-6 justify-center md:justify-start">
             {/* Magnus portrait */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
               <img src={magnusPortrait} alt="Magnus Rösman - Director and Producer" className="w-full h-full object-cover" />
             </div>
             
             {/* Erik Niva */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
               <img src={erikNiva} alt="Erik Niva from When We Were Kings documentary" className="w-full h-full object-cover" />
             </div>
             
             {/* Håkan Hellström with Rock-Björn */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
               <img src={hakanRockBjorn} alt="Håkan Hellström with Rock-Björn award" className="w-full h-full object-cover" />
             </div>
             
             {/* ICA-Stig */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
               <img src={icaStig} alt="ICA-Stig from the iconic ICA commercials" className="w-full h-full object-cover" />
             </div>
             
             {/* Håkan Hellström in orange jacket */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
               <img src={hakanOrangeJacket} alt="Håkan Hellström music video production" className="w-full h-full object-cover" />
             </div>
             
             {/* Olive oil production at Collinadolce */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden bg-card border-2 border-primary/20 shadow-[var(--shadow-glow)]">
+            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
               <img src={oliveOilProduction} alt="Olive oil production at Collinadolce estate" className="w-full h-full object-cover" />
             </div>
           </div>

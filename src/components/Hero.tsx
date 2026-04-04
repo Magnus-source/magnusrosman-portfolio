@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
+      className="min-h-screen flex items-end justify-start relative overflow-hidden bg-black"
     >
       {/* Video background */}
       <video
@@ -15,47 +15,43 @@ const Hero = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-70"
       >
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
-      
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          {/* Subtitle above name */}
-          <p className="text-lg md:text-xl lg:text-2xl font-light tracking-wide uppercase text-white/70 mb-4 animate-fade-in">
-            Selected works of
-          </p>
-          
-          {/* Main title */}
-          <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] font-bold tracking-tighter leading-none mb-8 animate-fade-in text-white">
-            <span className="block">MAGNUS</span>
-            <span className="block">RÖSMAN</span>
-          </h1>
-          
-          {/* Subtitle with line */}
-          <div className="flex items-center gap-6 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="h-px bg-white w-20" />
-            <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide uppercase text-white/90">
-              Film Director
-            </p>
-          </div>
 
-          {/* Scroll indicator */}
-          <button 
-            onClick={scrollToWork}
-            className="group flex items-center gap-3 text-white/70 hover:text-white transition-colors duration-300 animate-fade-in"
-            style={{ animationDelay: '0.4s' }}
-          >
-            <span className="text-sm uppercase tracking-wider">Scroll to explore</span>
-            <div className="w-8 h-12 border-2 border-current rounded-full flex items-start justify-center p-2 group-hover:border-white transition-colors">
-              <div className="w-1 h-2 bg-current rounded-full animate-bounce" />
-            </div>
-          </button>
+      {/* Gradient overlay — stronger at bottom for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
+
+      {/* Content — bottom-left, cinematic */}
+      <div className="relative z-10 px-8 md:px-14 pb-16 md:pb-20 w-full">
+        <h1 className="text-[13vw] sm:text-[11vw] md:text-[9vw] lg:text-[8vw] font-thin tracking-[0.08em] leading-none text-white uppercase mb-6">
+          Magnus<br />Rösman
+        </h1>
+
+        <div className="flex items-center gap-5">
+          <div className="w-10 h-px bg-white/40" />
+          <p className="text-xs md:text-sm font-light tracking-[0.35em] uppercase text-white/60">
+            Film Director
+          </p>
         </div>
+
+        <button
+          onClick={scrollToWork}
+          className="mt-12 flex items-center gap-3 text-white/40 hover:text-white/80 transition-colors duration-300 group"
+          aria-label="Scroll to work"
+        >
+          <span className="text-[10px] tracking-[0.3em] uppercase">Explore work</span>
+          <svg
+            className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
       </div>
     </section>
   );

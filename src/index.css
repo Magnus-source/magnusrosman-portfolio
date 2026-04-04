@@ -8,44 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 18% 8%;
-    --foreground: 40 10% 95%;
+    /* Pure black base — more cinematic than blue-tinted dark */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 94%;
 
-    --card: 220 16% 12%;
-    --card-foreground: 40 10% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 94%;
 
-    --popover: 220 16% 12%;
-    --popover-foreground: 40 10% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 94%;
 
-    --primary: 42 78% 65%;
-    --primary-foreground: 220 18% 8%;
+    /* Accent: very restrained off-white, not golden */
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 220 14% 18%;
-    --secondary-foreground: 40 10% 95%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 94%;
 
-    --muted: 220 14% 18%;
-    --muted-foreground: 40 5% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 50%;
 
-    --accent: 42 78% 65%;
-    --accent-foreground: 220 18% 8%;
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 10% 95%;
+    --destructive-foreground: 0 0% 94%;
 
-    --border: 220 14% 18%;
-    --input: 220 14% 18%;
-    --ring: 42 78% 65%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 0 0% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
-    /* Cinematic gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 18% 8%), hsl(220 16% 12%));
-    --gradient-accent: linear-gradient(135deg, hsl(42 78% 65%), hsl(42 88% 55%));
-    
     /* Shadows */
-    --shadow-glow: 0 0 40px hsla(42, 78%, 65%, 0.15);
-    --shadow-card: 0 10px 40px -10px hsla(220, 18%, 0%, 0.5);
-    
+    --shadow-glow: 0 0 60px hsla(0, 0%, 100%, 0.04);
+    --shadow-card: 0 10px 40px -10px hsla(0, 0%, 0%, 0.7);
+
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }

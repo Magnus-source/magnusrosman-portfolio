@@ -338,15 +338,18 @@ const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
     return 0;
   });
 
+  const filteredVideos = activeCategory
+    ? orderedVideos.filter((v) => v.category === activeCategory)
+    : orderedVideos;
+
   return (
-    <section className="py-12 px-6 min-h-screen">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[400px]">
-          {orderedVideos.map((video, index) => (
-            <VideoCard 
-              key={index} 
+    <section className="py-2 min-h-screen">
+      <div className="container mx-auto px-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 auto-rows-[420px]">
+          {filteredVideos.map((video, index) => (
+            <VideoCard
+              key={video.vimeoId}
               {...video}
-              isHighlighted={!activeCategory || video.category === activeCategory}
               className={video.size === "large" ? "md:col-span-2" : "md:col-span-1"}
             />
           ))}
