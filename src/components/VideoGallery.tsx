@@ -77,7 +77,7 @@ const videos = [
     vimeoId: "955439685",
     title: "SSC",
     description: "The knife",
-    category: "musicvideo",
+    category: "commercial",
     size: "small"
   },
   {
@@ -317,6 +317,27 @@ const videos = [
     description: "Jerry lurar Ulf",
     category: "commercial",
     size: "large"
+  },
+  {
+    vimeoId: "1180399822",
+    title: "Viaplay",
+    description: "VM-monolog Alexander Abdallah",
+    category: "commercial",
+    size: "small"
+  },
+  {
+    vimeoId: "1180779568",
+    title: "Don Tommaso",
+    description: "SSC Napoli - Januari 2026",
+    category: "longform",
+    size: "small"
+  },
+  {
+    vimeoId: "1180790865",
+    title: "VM-kval",
+    description: "Erik Nivas monolog",
+    category: "longform",
+    size: "small"
   },
 ];
 
