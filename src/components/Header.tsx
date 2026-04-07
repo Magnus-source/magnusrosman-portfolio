@@ -21,14 +21,7 @@ const Header = () => {
         scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-8 md:px-14 py-5 flex items-center justify-between">
-        <button
-          onClick={scrollToTop}
-          className="text-xs tracking-[0.3em] uppercase text-white/70 hover:text-white transition-colors duration-300"
-        >
-          Magnus Rösman
-        </button>
-
+      <nav className="container mx-auto px-8 md:px-14 py-5 flex items-center justify-end">
         <div className="flex items-center gap-10">
           <button
             onClick={() => scrollToSection("about")}

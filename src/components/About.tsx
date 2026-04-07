@@ -4,75 +4,107 @@ import hakanRockBjorn from "@/assets/hakan-rock-bjorn.jpeg";
 import icaStig from "@/assets/ica-stig.png";
 import hakanOrangeJacket from "@/assets/hakan-orange-jacket.png";
 import oliveOilProduction from "@/assets/olive-oil-production.png";
+import haxdansenBild from "@/assets/Häxdansen_bild.png";
+
+const filmStripImages = [
+  { src: erikNiva, alt: "Erik Niva, When We Were Kings" },
+  { src: hakanRockBjorn, alt: "Håkan Hellström with Rock-Björn" },
+  { src: icaStig, alt: "ICA-Stig" },
+  { src: hakanOrangeJacket, alt: "Håkan Hellström music video" },
+  { src: haxdansenBild, alt: "Häxdansen" },
+  { src: oliveOilProduction, alt: "Collinadolce olive oil production" },
+];
+
+const sections = [
+  {
+    label: "Documentary",
+    text: "During 2025, Magnus produced and directed the 4-part documentary series, \"When We Were Kings - Avskedet\", chronicling the end of the beloved football podcast hosted by Erik Niva and Håkan Andreason. The documentary premiered on Viaplay in May 2025 to widespread appreciation. His recent work also includes short stories capturing Italian football culture during Champions League 2024–25.",
+  },
+  {
+    label: "Music Videos",
+    text: "Strong visual storytelling became Magnus' trademark in his early career, winning numerous international awards for music videos and commercials. Artists include Håkan Hellström, The Ark, Turbonegro, Jay-Jay Johansson, Andreas Johnson, Hardcore Superstar, Brainstorm, Lambretta, Moneybrother, Lisa Miskovsky, Liberator, and Weeping Willows.",
+  },
+  {
+    label: "ICA Commercials",
+    text: "From 2005 to 2010, Magnus was the writer and director behind more than 100 films in the ICA commercials series — the world's longest-running advertising campaign with over 1,000 films to date. His work earned multiple Swedish and international advertising awards and opened doors to drama for Swedish Television.",
+  },
+  {
+    label: "TV Drama",
+    text: "With the dark comedy series Häxdansen, Magnus worked with the absolute elite of Swedish actors — Julia Dufvenius, Melinda Kinnaman, Sofia Ledarp, Livia Millhagen, Shanti Roney, Magnus Krepper, and Thomas Hanzon. The 6-episode drama was nominated for Kristallen for Best Drama of the Year. Aftenposten awarded it 5 out of 6 stars, comparing it to Lars von Trier's Riket.",
+  },
+  {
+    label: "Collaborations",
+    text: "Magnus enjoys working closely with clients, and many become long-term creative partners. ICA, McDonald's, EDEKA, and artists Håkan Hellström, The Ark, and Hardcore Superstar have all collaborated with him for many years.",
+  },
+  {
+    label: "Background",
+    text: "Magnus Rösman holds a Master's degree in Industrial Engineering and Economics from Chalmers University of Technology and UC Berkeley. He is currently studying AI and Machine Learning, exploring how generative AI can amplify creativity and make film production more efficient. Since 2013 he produces olive oil at his estate Collinadolce on the Italian east coast.",
+  },
+];
+
 const About = () => {
-  return <section id="about" className="py-24 px-6 bg-secondary/30">
-      <div className="container mx-auto max-w-6xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
-          Magnus Rösman - Writer & Director
-        </h1>
-        
-        <div className="grid md:grid-cols-[300px_1fr] lg:grid-cols-[400px_1fr] gap-12 items-start">
-          {/* Portrait and additional images */}
-          <div className="flex flex-col gap-6 justify-center md:justify-start">
-            {/* Magnus portrait */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
-              <img src={magnusPortrait} alt="Magnus Rösman - Director and Producer" className="w-full h-full object-cover" />
-            </div>
-            
-            {/* Erik Niva */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
-              <img src={erikNiva} alt="Erik Niva from When We Were Kings documentary" className="w-full h-full object-cover" />
-            </div>
-            
-            {/* Håkan Hellström with Rock-Björn */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
-              <img src={hakanRockBjorn} alt="Håkan Hellström with Rock-Björn award" className="w-full h-full object-cover" />
-            </div>
-            
-            {/* ICA-Stig */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
-              <img src={icaStig} alt="ICA-Stig from the iconic ICA commercials" className="w-full h-full object-cover" />
-            </div>
-            
-            {/* Håkan Hellström in orange jacket */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
-              <img src={hakanOrangeJacket} alt="Håkan Hellström music video production" className="w-full h-full object-cover" />
-            </div>
-            
-            {/* Olive oil production at Collinadolce */}
-            <div className="relative w-64 h-64 md:w-full md:h-auto md:aspect-square overflow-hidden bg-card">
-              <img src={oliveOilProduction} alt="Olive oil production at Collinadolce estate" className="w-full h-full object-cover" />
-            </div>
+  return (
+    <section id="about" className="bg-background">
+
+      <div className="container mx-auto px-8 md:px-14 py-16 md:py-24">
+
+        {/* Zone 1 — Portrait + Name */}
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start border-b border-white/10 pb-12 md:pb-16 mb-12 md:mb-16">
+          <div className="w-48 md:w-64 shrink-0 overflow-hidden">
+            <img
+              src={magnusPortrait}
+              alt="Magnus Rösman"
+              className="w-full aspect-[2/3] object-cover"
+            />
           </div>
-
-          {/* Bio Text */}
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p><strong>Magnus Rösman</strong> is a <strong>Swedish film director</strong> whose work since 1999 spans <strong>commercials, music videos, television drama, and documentary</strong>. His signature style combines emotional warmth with an ability to find the comedy in life's small disasters.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Recent Work: Documentary Filmmaker</h2>
-            <p>During 2025, Magnus produced and directed the 4-part documentary series, <strong>"When We Were Kings - Avskedet"</strong>, chronicling the end of the beloved football podcast hosted by Erik Niva and Håkan Andreason. The documentary premiered on Viaplay in May 2025 to widespread appreciation.</p>
-            <p>His recent work also includes short stories capturing <strong>Italian football culture</strong> during <strong>Champions League</strong> 2024-25. Following Italian teams and their supporters as they face international top rivals, revealing the passion, the rituals, and the profound place that calcio holds in Italian society.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Music Videos & Visual Storytelling</h2>
-            <p>Strong visual storytelling became Magnus' trademark in his early career, winning numerous international awards for music videos and commercials for premium car brands including Mercedes-Benz and Honda. The list of music video clients is long and include among others Swedish and international artists such as <strong>Håkan Hellström</strong>, <strong>The Ark</strong>, <strong>Turbonegro</strong>, <strong>Jay-Jay Johansson</strong>, <strong>Andreas Johnson</strong>, <strong>Hardcore Superstar</strong>, <strong>Brainstorm</strong>, <strong>Lambretta</strong>, <strong>Moneybrother</strong>, <strong>Lisa Miskovsky</strong>, <strong>Liberator</strong>, and <strong>Weeping Willows</strong>.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">ICA Commercials: The World's Longest-Running Ad Campaign</h2>
-            <p>From 2005 to 2010, Magnus was the writer and director behind <strong>more than 100 films</strong> in the <strong>ICA commercials</strong> series featuring ICA-Stig and his colleagues—the <strong>world's longest-running advertising campaign</strong> with over 1,000 films to date. During these five years, Magnus developed an unrivaled ability to create funny characters and sharp dialogue, earning multiple Swedish and international advertising awards. His work on the ICA campaign helped establish it as Sweden's most beloved and enduring brand storytelling, and opened doors to writing and directing drama for Swedish Television.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">TV Drama: Häxdansen</h2>
-            <p>With the dark comedy series <strong>Häxdansen</strong>, Magnus worked with the absolute elite of Swedish actors, including <strong>Julia Dufvenius</strong>, <strong>Melinda Kinnaman</strong>, <strong>Sofia Ledarp</strong>, <strong>Livia Millhagen</strong>, <strong>Shanti Roney</strong>, <strong>Magnus Krepper</strong>, and <strong>Thomas Hanzon</strong>. The 6-episode drama was nominated for <strong>Kristallen</strong> for Best Drama of the Year. Norwegian newspaper Aftenposten compared it with Lars von Trier's "Riket" and awarded Häxdansen 5 out of 6 stars.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Long-Term Creative Collaborations</h2>
-            <p>Magnus enjoys working closely with clients, and many become long-term creative partners. <strong>ICA</strong>, <strong>McDonald's</strong>, German retailer <strong>EDEKA</strong>, and Swedish artists <strong>Håkan Hellström</strong>, <strong>The Ark</strong>, and <strong>Hardcore Superstar</strong> have all collaborated with him for many years, trusting his creative vision and storytelling expertise.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Technical Background Meets Creative Innovation</h2>
-            <p>Magnus Rösman holds a <strong>Master's degree in Industrial Engineering and Economics</strong> from Chalmers University of Technology and University of California, Berkeley. Today, he's combining that technical background with his creative expertise by studying <strong>AI and Machine Learning</strong>—exploring how generative AI can amplify creativity and make film production more efficient.</p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground pt-4">Life Beyond Filmmaking</h2>
-            <p>Since 2013 Magnus produces olive oil at his small estate, <strong>Collinadolce</strong>, on the Italian east coast. He also gives talks on creativity, including his recent presentation <strong>"The Power of Constraints: How To Unleash Creativity."</strong></p>
+          <div className="flex flex-col justify-end h-full pt-4">
+            <h2 className="font-display text-[6vw] md:text-[4vw] font-normal leading-none text-white mb-4">
+              Magnus Rösman
+            </h2>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-6">
+              Writer &amp; Director
+            </p>
+            <p className="text-sm md:text-base text-white/50 font-light leading-relaxed max-w-xl">
+              A Swedish film director whose work since 1999 spans commercials, music videos, television drama, and documentary. His signature style combines emotional warmth with an ability to find the comedy in life's small disasters.
+            </p>
           </div>
         </div>
+
+        {/* Zone 2 — Bio in two columns */}
+        <div className="columns-1 md:columns-2 gap-14">
+          {sections.map((section) => (
+            <div key={section.label} className="break-inside-avoid mb-10">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-[9px] tracking-[0.3em] uppercase text-white/30">
+                  {section.label}
+                </span>
+                <div className="flex-1 h-px bg-white/10" />
+              </div>
+              <p className="text-sm text-white/55 font-light leading-relaxed">
+                {section.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
-    </section>;
+
+      {/* Zone 3 — Film strip of remaining 5 images */}
+      <div className="flex w-full overflow-hidden">
+        {filmStripImages.map((img) => (
+          <div key={img.alt} className="flex-1 aspect-[2/3] overflow-hidden">
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+
+    </section>
+  );
 };
+
 export default About;

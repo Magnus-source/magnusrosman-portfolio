@@ -1,7 +1,14 @@
 import VideoCard from "./VideoCard";
 
+type Category = string | string[];
+
+const inCategory = (category: Category, active: string) =>
+  Array.isArray(category) ? category.includes(active) : category === active;
+
 // Video order as specified
 const featuredOrder = [
+  "1180399822", // VM-kval Alexander Abdallahs monolog
+  "1180790865", // VM-kval Erik Nivas monolog
   "704553867", // DHL Watercooler
   "704553615", // DHL Meeting
   "704557975", // AMF KLF
@@ -10,6 +17,9 @@ const featuredOrder = [
   "707235058", // ICA Jamie Oliver
   "742323349", // Häxdansen Omklädningsrummet
   "1081950900", // Viaplay Ice Hockey
+  "1132428970", // ICA Gudfadern del 1
+  "1132428984", // ICA Gudfadern del 2
+  "1132428993", // ICA Gudfadern del 3
   "704551039", // NetOnNet Så mycket bättre
   "955439685", // SSC The knife
   "704554813", // Spies Priest
@@ -320,10 +330,10 @@ const videos = [
   },
   {
     vimeoId: "1180399822",
-    title: "Viaplay",
-    description: "VM-monolog Alexander Abdallah",
-    category: "commercial",
-    size: "small"
+    title: "VM-kval",
+    description: "Alexander Abdallahs monolog",
+    category: ["commercial", "longform"],
+    size: "large"
   },
   {
     vimeoId: "1180779568",
@@ -336,32 +346,56 @@ const videos = [
     vimeoId: "1180790865",
     title: "VM-kval",
     description: "Erik Nivas monolog",
-    category: "longform",
+    category: ["commercial", "longform"],
     size: "small"
   },
 ];
+
+// Rearrange videos so every row in the 3-column grid is complete:
+// valid rows are: large+small (2+1), small+large (1+2), or small+small+small (1+1+1)
+function arrangeForGrid(vids: typeof videos): typeof videos {
+  const large = vids.filter(v => v.size === 'large');
+  const small = vids.filter(v => v.size === 'small');
+  const result: typeof videos = [];
+
+  while (large.length > 0 || small.length > 0) {
+    if (large.length > 0 && small.length > 0) {
+      result.push(large.shift()!);
+      result.push(small.shift()!);
+    } else if (small.length >= 3) {
+      result.push(small.shift()!);
+      result.push(small.shift()!);
+      result.push(small.shift()!);
+    } else if (large.length > 0) {
+      result.push(large.shift()!);
+    } else {
+      while (small.length > 0) result.push(small.shift()!);
+    }
+  }
+
+  return result;
+}
 
 interface VideoGalleryProps {
   activeCategory: string;
 }
 
 const VideoGallery = ({ activeCategory }: VideoGalleryProps) => {
-  // Sort videos: featured first in specific order, then the rest
   const orderedVideos = [...videos].sort((a, b) => {
     const aIndex = featuredOrder.indexOf(a.vimeoId);
     const bIndex = featuredOrder.indexOf(b.vimeoId);
-    
-    if (aIndex !== -1 && bIndex !== -1) {
-      return aIndex - bIndex;
-    }
+    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
     if (aIndex !== -1) return -1;
     if (bIndex !== -1) return 1;
     return 0;
   });
 
-  const filteredVideos = activeCategory
-    ? orderedVideos.filter((v) => v.category === activeCategory)
+  const filtered = activeCategory
+    ? orderedVideos.filter((v) => inCategory(v.category, activeCategory))
     : orderedVideos;
+
+  // When a category filter is active, rearrange to avoid empty grid holes
+  const filteredVideos = activeCategory ? arrangeForGrid(filtered) : filtered;
 
   return (
     <section className="py-2 min-h-screen">

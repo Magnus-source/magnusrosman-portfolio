@@ -23,10 +23,11 @@ const Hero = () => {
       {/* Gradient overlay — stronger at bottom for text readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
 
-      {/* Content — bottom-left, cinematic */}
-      <div className="relative z-10 px-8 md:px-14 pb-16 md:pb-20 w-full">
-        <h1 className="text-[13vw] sm:text-[11vw] md:text-[9vw] lg:text-[8vw] font-thin tracking-[0.08em] leading-none text-white uppercase mb-6">
-          Magnus<br />Rösman
+      {/* Content — bottom, aligned with CategoryFilter */}
+      <div className="relative z-10 w-full pb-16 md:pb-20">
+        <div className="container mx-auto px-8 md:px-14">
+        <h1 className="font-display font-normal text-[7.4vw] sm:text-[6.4vw] md:text-[5.4vw] lg:text-[4.9vw] leading-none text-white mb-6 tracking-wide">
+          Magnus Rösman
         </h1>
 
         <div className="flex items-center gap-5">
@@ -52,6 +53,7 @@ const Hero = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        </div>
       </div>
     </section>
   );
