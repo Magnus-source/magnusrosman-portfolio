@@ -65,7 +65,7 @@ const About = () => {
               Writer &amp; Director
             </p>
             <p className="text-sm md:text-base text-white/50 font-light leading-relaxed max-w-xl">
-              A Swedish film director whose work since 1999 spans commercials, music videos, television drama, and documentary. His signature style combines emotional warmth with an ability to find the comedy in life's small disasters.
+              A Swedish film director and writer whose work since 1999 spans award-winning commercials, music videos, television drama and documentary. His signature style combines emotional warmth with an ability to find the comedy in life's small disasters. His music videos for artists like Håkan Hellström and The Ark defined the visuals for Swedish popular culture in the 2000s and his 100+ commercials for supermarket chain ICA have been a fixture of everyday Swedish life. Internationally, he has directed global launch campaigns for brands including Mercedes, Honda and McDonald's. His television drama "Häxdansen" was nominated Best Drama of the Year at the Swedish Television Awards and the documentary "When We Were Kings" premiered on Viaplay in May 2025.
             </p>
           </div>
         </div>
