@@ -52,8 +52,8 @@ const About = () => {
               src="/magnus-portrait.jpg"
               alt="Magnus Rösman, Swedish film director and writer – black and white portrait"
               title="Magnus Rösman"
-              width={852}
-              height={1072}
+              width={1200}
+              height={1788}
               className="w-full aspect-[2/3] object-cover"
             />
           </div>
