@@ -46,15 +46,15 @@ const About = () => {
 
 
         {/* Zone 1 — Portrait + Name */}
-        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-end border-b border-white/10 pb-12 md:pb-16 mb-12 md:mb-16">
-          <div className="w-48 md:w-64 shrink-0 overflow-hidden">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-stretch border-b border-white/10 pb-12 md:pb-16 mb-12 md:mb-16">
+          <div className="w-48 md:w-72 shrink-0 overflow-hidden md:relative">
             <img
               src="/magnus-portrait.jpg"
               alt="Magnus Rösman, Swedish film director and writer – black and white portrait"
               title="Magnus Rösman"
               width={1200}
               height={1788}
-              className="w-full aspect-[2/3] object-cover"
+              className="w-full aspect-[2/3] object-cover md:absolute md:inset-0 md:h-full md:aspect-auto"
             />
           </div>
           <div className="flex flex-col">
