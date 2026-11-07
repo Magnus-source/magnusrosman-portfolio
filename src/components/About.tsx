@@ -46,7 +46,7 @@ const About = () => {
 
 
         {/* Zone 1 — Portrait + Name */}
-        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start border-b border-white/10 pb-12 md:pb-16 mb-12 md:mb-16">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-end border-b border-white/10 pb-12 md:pb-16 mb-12 md:mb-16">
           <div className="w-48 md:w-64 shrink-0 overflow-hidden">
             <img
               src="/magnus-portrait.jpg"
@@ -57,7 +57,7 @@ const About = () => {
               className="w-full aspect-[2/3] object-cover"
             />
           </div>
-          <div className="flex flex-col justify-end h-full pt-4">
+          <div className="flex flex-col">
             <h2 className="font-display text-[6vw] md:text-[4vw] font-normal leading-none text-white mb-4">
               Magnus Rösman
             </h2>
