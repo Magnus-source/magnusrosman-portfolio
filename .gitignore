@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local-only large files
+*.mp4
+!public/hero-background.mp4
+dist.zip

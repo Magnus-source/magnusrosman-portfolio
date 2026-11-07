@@ -24,6 +24,10 @@
     <meta property="og:title" content="Magnus Rösman - Award-Winning Director" />
     <meta property="og:description" content="Creating catchy commercials and music videos since 1999. 100+ ICA films, work with Håkan Hellström, The Ark, and drama series Häxdansen." />
     <meta property="og:image" content="https://magnusrosman.com/magnus-portrait.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="852" />
+    <meta property="og:image:height" content="1072" />
+    <meta property="og:image:alt" content="Magnus Rösman, Swedish film director and writer – black and white portrait" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
@@ -32,6 +36,7 @@
     <meta name="twitter:title" content="Magnus Rösman - Award-Winning Director" />
     <meta name="twitter:description" content="Creating catchy commercials and music videos since 1999. 100+ ICA films, work with Håkan Hellström, The Ark, and drama series Häxdansen." />
     <meta name="twitter:image" content="https://magnusrosman.com/magnus-portrait.jpg" />
+    <meta name="twitter:image:alt" content="Magnus Rösman, Swedish film director and writer – black and white portrait" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -43,7 +48,28 @@
       "jobTitle": "Film Director",
       "description": "Award-winning Swedish director specializing in commercials, music videos, and drama series",
       "url": "https://magnusrosman.com",
-      "image": "https://magnusrosman.com/magnus-portrait.jpg",
+      "@id": "https://magnusrosman.com/#person",
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://magnusrosman.com/#portrait",
+        "url": "https://magnusrosman.com/magnus-portrait.jpg",
+        "contentUrl": "https://magnusrosman.com/magnus-portrait.jpg",
+        "width": 852,
+        "height": 1072,
+        "encodingFormat": "image/jpeg",
+        "caption": "Magnus Rösman, Swedish film director and writer",
+        "name": "Portrait of Magnus Rösman",
+        "representativeOfPage": true
+      },
+      "sameAs": [
+        "https://instagram.com/magnusrosman",
+        "https://linkedin.com/in/magnusrosman"
+      ],
+      "nationality": {
+        "@type": "Country",
+        "name": "Sweden"
+      },
+      "mainEntityOfPage": "https://magnusrosman.com",
       "alumniOf": [
         {
           "@type": "EducationalOrganization",
@@ -74,7 +100,7 @@
       "workExample": [
         {
           "@type": "Movie",
-          "name": "When We Were Kings - Avslutet",
+          "name": "When We Were Kings - Avskedet",
           "datePublished": "2025",
           "genre": "Documentary"
         },
